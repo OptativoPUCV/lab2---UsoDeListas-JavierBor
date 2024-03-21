@@ -1670,3 +1670,37 @@ exercises.c:135:84: error: suggest parentheses around ‘&&’ within ‘||’ [
 cc1: all warnings being treated as errors
 Compilation failed
 ae08dd6
+Thu 21 Mar 2024 09:06:15 PM UTC: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:121:3: error: implicit declaration of function ‘initialize’ [-Werror=implicit-function-declaration]
+  121 |   initialize(P1);
+      |   ^~~~~~~~~~
+exercises.c:127:22: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  127 |       push(P1, cadena[i]);
+      |                ~~~~~~^~~
+      |                      |
+      |                      char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:135:9: error: assignment to ‘char’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  135 |       c = pop(P1);
+      |         ^
+exercises.c:136:20: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  136 |       if (c != '(' && cadena[i] == ')' || c != '[' && cadena[i] == ']' || c != '{' && cadena[i] == '}') {
+      |           ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:136:84: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  136 |       if (c != '(' && cadena[i] == ')' || c != '[' && cadena[i] == ']' || c != '{' && cadena[i] == '}') {
+      |                                                                           ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:121:3: error: ‘P1’ is used uninitialized [-Werror=uninitialized]
+  121 |   initialize(P1);
+      |   ^~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6b1f791

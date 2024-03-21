@@ -533,3 +533,37 @@ Thu 21 Mar 2024 08:29:36 PM UTC:
  tests:  4|1
 total_score: 50/70
 a5ee95c
+Thu 21 Mar 2024 08:34:13 PM UTC: 
+ exercises.c | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:120:3: error: unknown type name ‘stack’; did you mean ‘Stack’?
+  120 |   stack* pila = create_stack();
+      |   ^~~~~
+      |   Stack
+exercises.c:120:17: error: initialization of ‘int *’ from incompatible pointer type ‘Stack *’ {aka ‘List *’} [-Werror=incompatible-pointer-types]
+  120 |   stack* pila = create_stack();
+      |                 ^~~~~~~~~~~~
+exercises.c:123:12: error: ‘P1’ undeclared (first use in this function); did you mean ‘y1’?
+  123 |       push(P1, cadena[i]);
+      |            ^~
+      |            y1
+exercises.c:123:12: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:123:22: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  123 |       push(P1, cadena[i]);
+      |                ~~~~~~^~~
+      |                      |
+      |                      char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:120:10: error: unused variable ‘pila’ [-Werror=unused-variable]
+  120 |   stack* pila = create_stack();
+      |          ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0922537

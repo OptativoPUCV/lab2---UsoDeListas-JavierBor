@@ -1812,3 +1812,20 @@ exercises.c:135:84: error: suggest parentheses around ‘&&’ within ‘||’ [
 cc1: all warnings being treated as errors
 Compilation failed
 ce1a2cf
+Thu 21 Mar 2024 09:09:42 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:134:9: error: assignment to ‘char’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  134 |       c = pop(P1);
+      |         ^
+exercises.c:135:20: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  135 |       if (c != '(' && cadena[i] == ')' || c != '[' && cadena[i] == ']' || c != '{' && cadena[i] == '}') {
+      |           ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:135:84: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  135 |       if (c != '(' && cadena[i] == ')' || c != '[' && cadena[i] == ']' || c != '{' && cadena[i] == '}') {
+      |                                                                           ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+db5a5b3

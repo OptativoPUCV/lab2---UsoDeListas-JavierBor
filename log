@@ -24,3 +24,14 @@ exercises.c:64:14: error: assignment to ‘int’ from ‘void *’ makes intege
 cc1: all warnings being treated as errors
 Compilation failed
 aeae83e
+Thu 21 Mar 2024 08:13:32 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:64:15: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   64 |     *elemento = next(L);
+      |               ^
+cc1: all warnings being treated as errors
+Compilation failed
+d9f8b34

@@ -41,3 +41,15 @@ Thu 21 Mar 2024 08:13:43 PM UTC:
  tests:  2|3
 total_score: 20/70
 b7f2369
+Thu 21 Mar 2024 08:15:28 PM UTC: 
+ exercises.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:82:7: error: implicit declaration of function ‘popcurrent’; did you mean ‘popCurrent’? [-Werror=implicit-function-declaration]
+   82 |       popcurrent(L);
+      |       ^~~~~~~~~~
+      |       popCurrent
+cc1: all warnings being treated as errors
+Compilation failed
+3de4241

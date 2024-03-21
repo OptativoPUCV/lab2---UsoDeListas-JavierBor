@@ -1572,3 +1572,41 @@ exercises.c:120:9: error: unused variable ‘P1’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 16f6449
+Thu 21 Mar 2024 09:04:32 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:120:3: error: variable ‘P1’ has initializer but incomplete type
+  120 |   Stack P1 = create_stack();
+      |   ^~~~~
+exercises.c:120:9: error: storage size of ‘P1’ isn’t known
+  120 |   Stack P1 = create_stack();
+      |         ^~
+exercises.c:123:30: error: comparison between pointer and integer [-Werror]
+  123 |   for (int i = 0 ; cadena[i] != "\0" ; i++){
+      |                              ^~
+exercises.c:123:30: error: comparison with string literal results in unspecified behavior [-Werror=address]
+exercises.c:126:23: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  126 |       push(&P1, cadena[i]);
+      |                 ~~~~~~^~~
+      |                       |
+      |                       char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:135:20: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  135 |       if (c != '(' && cadena[i] == ')' || c != '[' && cadena[i] == ']' || c != '{' && cadena[i] == '}') {
+      |           ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:135:84: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  135 |       if (c != '(' && cadena[i] == ')' || c != '[' && cadena[i] == ']' || c != '{' && cadena[i] == '}') {
+      |                                                                           ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:120:9: error: unused variable ‘P1’ [-Werror=unused-variable]
+  120 |   Stack P1 = create_stack();
+      |         ^~
+cc1: all warnings being treated as errors
+Compilation failed
+84ca4ad

@@ -1135,3 +1135,29 @@ exercises.c:134:104: error: suggest parentheses around ‘&&’ within ‘||’ 
 cc1: all warnings being treated as errors
 Compilation failed
 ef54b08
+Thu 21 Mar 2024 08:42:35 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:125:16: error: invalid type argument of unary ‘*’ (have ‘int’)
+  125 |       push(P1, *cadena[i]);
+      |                ^~~~~~~~~~
+exercises.c:134:21: error: comparison between pointer and integer [-Werror]
+  134 |         if (top(P1) == '(' && cadena[i] == ')' || top(P1) == '[' && cadena[i] == ']' || top(P1) == '{' && cadena[i] == '}') {
+      |                     ^~
+exercises.c:134:59: error: comparison between pointer and integer [-Werror]
+  134 |         if (top(P1) == '(' && cadena[i] == ')' || top(P1) == '[' && cadena[i] == ']' || top(P1) == '{' && cadena[i] == '}') {
+      |                                                           ^~
+exercises.c:134:28: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  134 |         if (top(P1) == '(' && cadena[i] == ')' || top(P1) == '[' && cadena[i] == ']' || top(P1) == '{' && cadena[i] == '}') {
+      |             ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:134:97: error: comparison between pointer and integer [-Werror]
+  134 |         if (top(P1) == '(' && cadena[i] == ')' || top(P1) == '[' && cadena[i] == ']' || top(P1) == '{' && cadena[i] == '}') {
+      |                                                                                                 ^~
+exercises.c:134:104: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  134 |         if (top(P1) == '(' && cadena[i] == ')' || top(P1) == '[' && cadena[i] == ']' || top(P1) == '{' && cadena[i] == '}') {
+      |                                                                                         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+3a344d8

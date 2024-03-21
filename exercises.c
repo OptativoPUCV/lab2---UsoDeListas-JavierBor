@@ -122,7 +122,7 @@ int parentesisBalanceados(char *cadena) {
   for (int i = 0 ; i < strlen(cadena) ; i++){
     
     if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{'){
-      void *dato = (void*) malloc(sizeof(char));
+      char *dato = (void*) malloc(sizeof(char));
       push(P1, dato);
     }
 
@@ -131,7 +131,7 @@ int parentesisBalanceados(char *cadena) {
         return 0;
       }
 
-      if ((char*) top(P1) == '(' && cadena[i] == ')' || (char*) top(P1) == '[' && cadena[i] == ']' || (char*) top(P1) == '{' && cadena[i] == '}') {
+      if ((char *) top(P1) == '(' && cadena[i] == ')' || (char *) top(P1) == '[' && cadena[i] == ']' || (char *) top(P1) == '{' && cadena[i] == '}') {
         pop(P1);
       }
       else return 0;

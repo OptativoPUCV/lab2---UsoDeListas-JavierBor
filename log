@@ -1291,3 +1291,27 @@ exercises.c:134:126: error: suggest parentheses around ‘&&’ within ‘||’ 
 cc1: all warnings being treated as errors
 Compilation failed
 17bbfad
+Thu 21 Mar 2024 08:52:34 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:134:28: error: comparison between pointer and integer [-Werror]
+  134 |       if ((char *) top(P1) == '(' && cadena[i] == ')' || (char *) top(P1) == '[' && cadena[i] == ']' || (char *) top(P1) == '{' && cadena[i] == '}') {
+      |                            ^~
+exercises.c:134:75: error: comparison between pointer and integer [-Werror]
+  134 |       if ((char *) top(P1) == '(' && cadena[i] == ')' || (char *) top(P1) == '[' && cadena[i] == ']' || (char *) top(P1) == '{' && cadena[i] == '}') {
+      |                                                                           ^~
+exercises.c:134:35: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  134 |       if ((char *) top(P1) == '(' && cadena[i] == ')' || (char *) top(P1) == '[' && cadena[i] == ']' || (char *) top(P1) == '{' && cadena[i] == '}') {
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:134:122: error: comparison between pointer and integer [-Werror]
+  134 |       if ((char *) top(P1) == '(' && cadena[i] == ')' || (char *) top(P1) == '[' && cadena[i] == ']' || (char *) top(P1) == '{' && cadena[i] == '}') {
+      |                                                                                                                          ^~
+In file included from test.c:5:
+exercises.c:134:129: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  134 |       if ((char *) top(P1) == '(' && cadena[i] == ')' || (char *) top(P1) == '[' && cadena[i] == ']' || (char *) top(P1) == '{' && cadena[i] == '}') {
+      |                                                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4b5b339

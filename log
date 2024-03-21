@@ -1161,3 +1161,37 @@ exercises.c:134:104: error: suggest parentheses around ‘&&’ within ‘||’ 
 cc1: all warnings being treated as errors
 Compilation failed
 3a344d8
+Thu 21 Mar 2024 08:46:08 PM UTC: 
+ exercises.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:125:22: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  125 |       push(P1, cadena[i]);
+      |                ~~~~~~^~~
+      |                      |
+      |                      char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:133:19: error: comparison between pointer and integer [-Werror]
+  133 |       if (top(P1) == '(' && cadena[i] == ')' || top(P1) == '[' && cadena[i] == ']' || top(P1) == '{' && cadena[i] == '}') {
+      |                   ^~
+exercises.c:133:57: error: comparison between pointer and integer [-Werror]
+  133 |       if (top(P1) == '(' && cadena[i] == ')' || top(P1) == '[' && cadena[i] == ']' || top(P1) == '{' && cadena[i] == '}') {
+      |                                                         ^~
+exercises.c:133:26: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  133 |       if (top(P1) == '(' && cadena[i] == ')' || top(P1) == '[' && cadena[i] == ']' || top(P1) == '{' && cadena[i] == '}') {
+      |           ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:133:95: error: comparison between pointer and integer [-Werror]
+  133 |       if (top(P1) == '(' && cadena[i] == ')' || top(P1) == '[' && cadena[i] == ']' || top(P1) == '{' && cadena[i] == '}') {
+      |                                                                                               ^~
+exercises.c:133:102: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  133 |       if (top(P1) == '(' && cadena[i] == ')' || top(P1) == '[' && cadena[i] == ']' || top(P1) == '{' && cadena[i] == '}') {
+      |                                                                                       ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+faa6be1

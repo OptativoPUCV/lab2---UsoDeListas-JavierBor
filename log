@@ -1338,3 +1338,26 @@ exercises.c:134:102: error: suggest parentheses around ‘&&’ within ‘||’ 
 cc1: all warnings being treated as errors
 Compilation failed
 9159e4e
+Thu 21 Mar 2024 08:53:22 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:134:19: error: comparison between pointer and integer [-Werror]
+  134 |       if (top(P1) == '(' && cadena[i] == ')' || top(P1) == '[' && cadena[i] == ']' || top(P1) == '{' && cadena[i] == '}') {
+      |                   ^~
+exercises.c:134:57: error: comparison between pointer and integer [-Werror]
+  134 |       if (top(P1) == '(' && cadena[i] == ')' || top(P1) == '[' && cadena[i] == ']' || top(P1) == '{' && cadena[i] == '}') {
+      |                                                         ^~
+exercises.c:134:26: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  134 |       if (top(P1) == '(' && cadena[i] == ')' || top(P1) == '[' && cadena[i] == ']' || top(P1) == '{' && cadena[i] == '}') {
+      |           ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:134:95: error: comparison between pointer and integer [-Werror]
+  134 |       if (top(P1) == '(' && cadena[i] == ')' || top(P1) == '[' && cadena[i] == ']' || top(P1) == '{' && cadena[i] == '}') {
+      |                                                                                               ^~
+exercises.c:134:102: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  134 |       if (top(P1) == '(' && cadena[i] == ')' || top(P1) == '[' && cadena[i] == ']' || top(P1) == '{' && cadena[i] == '}') {
+      |                                                                                       ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+861e1e5

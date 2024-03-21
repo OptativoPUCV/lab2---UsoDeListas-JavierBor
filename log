@@ -1704,3 +1704,23 @@ exercises.c:121:3: error: ‘P1’ is used uninitialized [-Werror=uninitialized]
 cc1: all warnings being treated as errors
 Compilation failed
 6b1f791
+Thu 21 Mar 2024 09:07:49 PM UTC: 
+ exercises.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:126:16: error: invalid type argument of unary ‘*’ (have ‘int’)
+  126 |       push(P1, *cadena[i]);
+      |                ^~~~~~~~~~
+exercises.c:134:9: error: assignment to ‘char’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  134 |       c = pop(P1);
+      |         ^
+exercises.c:135:20: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  135 |       if (c != '(' && cadena[i] == ')' || c != '[' && cadena[i] == ']' || c != '{' && cadena[i] == '}') {
+      |           ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:135:84: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  135 |       if (c != '(' && cadena[i] == ')' || c != '[' && cadena[i] == ']' || c != '{' && cadena[i] == '}') {
+      |                                                                           ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+18ff231
